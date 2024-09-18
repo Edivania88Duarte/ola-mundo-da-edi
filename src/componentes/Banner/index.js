@@ -23,13 +23,14 @@ export default function Bannner() {
                 <img 
                     className={styles.circuloColorido}
                     src={circuloColorido}
+                    alt="Foto da circulo colorido"
                     aria-hidden={true}
                 />
 
                 <img
                     className={styles.minhaFoto}
                     src={minhaFoto}
-                    alt='Foto da Edi sorrindo'
+                    alt="Foto da Edi sorrindo"
                 
                 />
 

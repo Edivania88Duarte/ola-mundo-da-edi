@@ -16,19 +16,18 @@ export default function SobreMim() {
 
            <img 
                 src={fotoSobreMim}
-                alt='Foto Doll Developer'
+                alt='Foto da Edi sorrindo'
                 className={styles.fotoSobreMim}
            />
 
            <p className={styles.paragrafo}>
-            Tudo bem? Prazer, sou a Edivania Duarte, mas fique à vontade para me chamar de Edi. 
-            Sou estudante de ADS e estou muito feliz por te ver por aqui.
+            Que bom te ter por aqui!
            </p>
            <p className={styles.paragrafo}>
             Tenho formação em Direito, uma área que me ensinou muito sobre disciplina e análise crítica. 
-            No entanto, meu coração bateu mais forte pela tecnologia, quando tive o primeiro contato, o que me levou a fazer uma transição de carreira
+            No entanto, meu coração bateu mais forte pela Tecnologia, quando tive o primeiro contato, o que me levou a fazer uma transição de carreira
             aos 35 anos. 
-            Hoje, sou Desenvolvedora Full Stack em formação, pois como dito antes, estou cursando Análise e Desenvolvimento de Sistemas, além de atuar como estagiária de Desenvolvimento.
+            Hoje, sou Desenvolvedora Full Stack em formação. Atualmente, curso Análise e Desenvolvimento de Sistemas e atuo como estagiária de Desenvolvimento.
             </p>
             <p className={styles.paragrafo}>
             O primeiro contato com tecnologia, se deu através de uma conversa com minha filha no começo de 2023, que na 
@@ -51,7 +50,7 @@ export default function SobreMim() {
             </p>
             <p className={styles.paragrafo}>
             Tudo isso tem sido tão intenso e gratificante, que quando olho pra trás, só consigo sentir gratidão a Deus e aos anjos que me ajudaram a 
-            trilhar esse caminho e que permancem ao meu lado, segurando minha mão, sustentando e torcendo pela minha evolução. A tecnologia me trouxe não só
+            trilhar esse caminho e que permancem ao meu lado, segurando minha mão e torcendo pela minha evolução. A tecnologia me trouxe não só
             aprendizados e habilidades para migrar de carreira, mas amigos valiosos que estão junto comigo nessa jornada. 
             E se você chegou até aqui e ainda tá bem no início, cheio de anseios, incertezas e dúvidas, como um dia estive, te digo: 
             É possível. Acredite em você, dê seu melhor até quando sua mente tentar te pregar peças e não desista!🌟

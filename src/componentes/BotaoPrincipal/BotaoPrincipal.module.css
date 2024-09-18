@@ -20,3 +20,7 @@
 .botaoPrincipal:hover {
     border: 3px solid var(--rosa-escuro);
 }
+
+.botaoPrincipal:active {
+    border: 5px solid var(--rosa-claro);
+}

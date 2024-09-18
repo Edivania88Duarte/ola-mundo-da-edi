@@ -7,6 +7,7 @@ import PaginaPadrao from "componentes/PaginaPadrao";
 import Post from "paginas/Post";
 import NaoEncontrada from "paginas/NaoEncontrada";
 import ScrollToTop from "componentes/ScrollToTop";
+import Contato from "paginas/Contato";
 
 function AppRoutes() {
   return (
@@ -17,7 +18,8 @@ function AppRoutes() {
       <Routes>
         <Route path="/" element={<PaginaPadrao />}>
           <Route path="/" element={<Inicio />} />
-          <Route path="/sobremim" element={<SobreMim />} />          
+          <Route path="/sobremim" element={<SobreMim />} />  
+          <Route path="/contato" element={<Contato />} />         
         </Route>
 
         <Route path="posts/:id*" element={<Post />}/>
