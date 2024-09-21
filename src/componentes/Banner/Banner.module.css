@@ -8,14 +8,14 @@
  
 .titulo {
     font-family: var(--fonte-secundaria);
-    font-size: 4rem;
+    font-size: 1.8rem;
     margin-top: 4.875rem;
     margin-bottom: 2rem;
 }
  
 .paragrafo {
     font-family: var(--fonte-secundaria);
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     line-height: 2rem;
     margin-bottom: 2rem;
 }

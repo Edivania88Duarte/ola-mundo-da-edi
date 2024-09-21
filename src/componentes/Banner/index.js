@@ -13,7 +13,7 @@ export default function Bannner() {
 
                 <p className={styles.paragrafo}>
                     Seja bem-vindo(a) ao meu cantinho pessoal!
-                    Eu sou a Edivania Duarte, mais conhecida como Edi :) 
+                    Eu sou a Edivania Duarte, mais conhecida como Edi :) <br></br>
                     Desenvolvedora Full Stack em formação e estagiária de desenvolvimento, sedenta por novos aprendizados e apaixonada por conexões. Aqui compartilho os 
                     conhecimentos que venho adquirindo ao longo da minha formação e jornada. Espero contribuir com algo novo!
                 </p>

@@ -1,7 +1,7 @@
 .rodape {
     background-color: var(--rosa-escuro);
     color: var(--branco);
-    padding: 2rem 0;
+    padding: 0.8rem 0;
     display: flex;
     justify-content: center;
     align-items: center;
