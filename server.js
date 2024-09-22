@@ -101,7 +101,7 @@ app.post('/send-email', (req, res) => {
             res.status(500).send('Erro ao enviar mensagem.');
         } else {
             console.log('E-mail enviado:', info.response);
-            res.status(200).send('Mensagem enviada com sucesso.');
+            res.status(200).send('Mensagem enviada com sucesso.');           
         }
     });
 });

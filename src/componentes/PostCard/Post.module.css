@@ -17,7 +17,7 @@
 
 .titulo {
     font-family: var(--fonte-secundaria);
-    font-size: 1.25rem;
+    font-size: 1.225rem;
     color: var(--rosa-escuro);
     line-height: 1.75rem;
     margin: 1.5rem 0 1.75rem;
@@ -27,7 +27,7 @@
     display: inline-block;
     border-radius: 24px;
     padding: 0.75rem 1.5rem;
-    font-size: 1.125rem;
+    font-size: 1rem;
     line-height: 1.125rem;
     background-color: var(--rosa-medio);
     color: var(--branco);

@@ -21,7 +21,7 @@
 .titulo {
     font-family: var(--fonte-secundaria);
     padding: 0 7.5rem;
-    font-size: 4rem;
+    font-size: 2.5rem;
     display: flex;
     align-items: center;
 }

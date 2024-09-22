@@ -38,7 +38,7 @@ export default function Contato() {
     return (
         <PostModelo
             fotoCapa={fotoCapa}
-            titulo="Contato"
+            titulo="Sugestões, elogios, dúvidas e parcerias"
         >
             <h3 className={styles.subtitulo}>
                 Entre em contato
@@ -75,10 +75,10 @@ export default function Contato() {
 
             <div className={styles.redesSociais}>
                 <a href="https://www.linkedin.com/in/edivania-duarte/" target="_blank" rel="noopener noreferrer">
-                    <FaLinkedin size={30} /> {/* Ícone do LinkedIn */}
+                    <FaLinkedin size={30} /> 
                 </a>
                 <a href="https://github.com/Edivania88Duarte" target="_blank" rel="noopener noreferrer">
-                    <FaGithub size={30} /> {/* Ícone do GitHub */}
+                    <FaGithub size={30} /> 
                 </a>
             </div>
         </PostModelo>
