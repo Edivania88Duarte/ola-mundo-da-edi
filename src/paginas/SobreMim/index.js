@@ -25,14 +25,12 @@ export default function SobreMim() {
            </p>
            <p className={styles.paragrafo}>
             Tenho formação em Direito, uma área que me ensinou muito sobre disciplina e análise crítica. 
-            No entanto, meu coração bateu mais forte pela Tecnologia, quando tive o primeiro contato, o que me levou a fazer uma transição de carreira
-            aos 35 anos. 
+            No entanto, meu coração bateu mais forte pela Tecnologia, quando tive o primeiro contato, o que me levou a fazer uma transição de carreira. 
             Hoje, sou Desenvolvedora Full Stack em formação. Atualmente, curso Análise e Desenvolvimento de Sistemas e atuo como estagiária de Desenvolvimento.
             </p>
             <p className={styles.paragrafo}>
-            O primeiro contato com tecnologia, se deu através de uma conversa com minha filha no começo de 2023, que na 
-            época tinha 12 anos.
-            A forma como ela me falou sobre o assunto me deixou super curiosa, então comecei a pesquisar e ainda sem entender, participei de workshop de programação e
+            O primeiro contato com tecnologia, se deu através de uma conversa com minha filha no começo de 2023.
+            A forma como ela abordou o assunto me deixou super curiosa, então comecei a pesquisar e ainda sem entender, participei de workshop de programação e
             posteriormente fiz uma aula experimental, o que me deixou encantada. Na época, por incompatibilidade de horários, não consegui fazer o curso   
             presencial, porém, na metade do ano encontrei um curso online, que viabilizou o início dos meus estudos e fometou ainda mais, a vontade de
             migrar de carreira.            
@@ -53,7 +51,7 @@ export default function SobreMim() {
             trilhar esse caminho e que permancem ao meu lado, segurando minha mão e torcendo pela minha evolução. A tecnologia me trouxe não só
             aprendizados e habilidades para migrar de carreira, mas amigos valiosos que estão junto comigo nessa jornada. 
             E se você chegou até aqui e ainda tá bem no início, cheio de anseios, incertezas e dúvidas, como um dia estive, te digo: 
-            É possível. Acredite em você, dê seu melhor até quando sua mente tentar te pregar peças e não desista!🌟
+            É possível. Acredite em você, dê seu melhor até quando sua mente tentar te pregar peças e não desista!A bênção já existe. Basta clareza para acessá-la.🌟
             </p>
         </PostModelo>
     )
