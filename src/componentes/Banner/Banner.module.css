@@ -64,12 +64,12 @@
     }
    
     .imagens > .minhaFoto {
-        width: 25vw;
+        width: -25vw;
         border-radius: 50%;
     }
    
     .imagens > .circuloColorido {
-        right: -10vw;
+        right: 10vw;
         width: 35vw;
     }
 }
