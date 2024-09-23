@@ -90,6 +90,7 @@
     }
 
     .redesSociais {      
+        display: flex;
         gap: 10px; /* Reduz o espaçamento entre os ícones */
         align-items: center;
         justify-content: center;
