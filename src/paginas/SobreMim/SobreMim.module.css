@@ -94,22 +94,25 @@
         height: auto; /* Ajusta a altura */
         display: flex;
         justify-content: center;
-        align-items: flex-start; /* Alinha os itens no início */
-        flex-direction: column; /* Coloca a imagem e o círculo em coluna */
-        position: relative; /* Para que o círculo e a imagem sejam posicionados em relação a este container */
+        align-items: flex-start;
+        position: relative; /* Para posicionamento absoluto dos filhos */
+        margin-top: 1rem; /* Ajusta o espaçamento acima */
     }
 
     .imagens > .minhaFoto {
-        width: 55vw; /* Tamanho adequado para mobile */
-        height: 55vw; /* Mantém a altura igual à largura para circularidade */
+        width: 45vw; /* Tamanho adequado para mobile */
+        height: 45vw; /* Mantém a altura igual à largura para circularidade */
         position: absolute; /* Posiciona a foto em relação ao container */
         right: 5vw; /* Ajuste para afastar do canto */
-        bottom: 0; /* Mantém na parte inferior */
+        bottom: 10px; /* Um pouco acima do fundo */
+        border-radius: 50%; /* Garante que fique redonda */
+        z-index: 0; /* Garante que a foto fique atrás do círculo */
     }
 
     .imagens > .circuloColorido {
         width: 240px; /* Ajuste conforme necessário */
         position: relative; /* Garante que o círculo permaneça na posição padrão */
         z-index: 1; /* Garante que o círculo fique acima da foto */
+        margin-top: 1rem; /* Aumenta o espaçamento se necessário */
     }
 }
