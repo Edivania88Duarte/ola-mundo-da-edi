@@ -89,10 +89,10 @@
         padding: 1rem; /* Aumenta o espaçamento interno para melhor usabilidade em touch */
     }
 
-    .redesSociais {
-        flex-direction: column; /* Organiza as redes sociais em coluna no mobile */
+    .redesSociais {      
         gap: 10px; /* Reduz o espaçamento entre os ícones */
         align-items: center;
+        justify-content: center;
     }
 
     .sucesso {
