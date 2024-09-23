@@ -66,6 +66,8 @@
     .imagens > .minhaFoto {
         width: 50vw;
         border-radius: 50%;
+        width: 350px;
+        height: 350px; 
     }
    
     .imagens > .circuloColorido {
