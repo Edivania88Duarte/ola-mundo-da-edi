@@ -69,7 +69,7 @@
     }
    
     .imagens > .circuloColorido {
-        right: 10vw;
+        right: -10vw;
         width: 35vw;
     }
 }
