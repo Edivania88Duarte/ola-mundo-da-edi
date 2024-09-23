@@ -81,32 +81,35 @@
         padding: 2rem 1rem;
         display: block;
     }
- 
+
     .titulo {
         margin-bottom: 2rem;
     }
- 
+
     .paragrafo {
         margin-bottom: 2rem;
     }
- 
+
     .imagens {
-        height: 307px;
+        height: auto; /* Ajusta a altura */
+        display: flex;
+        justify-content: center;
+        align-items: flex-start; /* Alinha os itens no início */
+        flex-direction: column; /* Coloca a imagem e o círculo em coluna */
+        position: relative; /* Para que o círculo e a imagem sejam posicionados em relação a este container */
     }
- 
-    .imagens > .minhaFoto, .imagens > .circuloColorido {
-        left: 0;
-        right: 0;
-        margin: 0 auto;
-    }
-   
+
     .imagens > .minhaFoto {
-        width: 170px;
-        transform: translate(5rem, 0px);
+        width: 55vw; /* Tamanho adequado para mobile */
+        height: 55vw; /* Mantém a altura igual à largura para circularidade */
+        position: absolute; /* Posiciona a foto em relação ao container */
+        right: 5vw; /* Ajuste para afastar do canto */
+        bottom: 0; /* Mantém na parte inferior */
     }
-   
+
     .imagens > .circuloColorido {
-        width: 240px;
-        transform: translate(-1.5rem, 0px);
+        width: 240px; /* Ajuste conforme necessário */
+        position: relative; /* Garante que o círculo permaneça na posição padrão */
+        z-index: 1; /* Garante que o círculo fique acima da foto */
     }
 }
