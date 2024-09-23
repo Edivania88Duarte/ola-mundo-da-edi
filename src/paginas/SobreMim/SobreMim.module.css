@@ -1,58 +1,113 @@
-.fotoSobreMim {
-    margin-bottom: .5rem;
-    margin-left: 1.5rem;
-    width: 40vw;
-    float: right;
-}
 
-.subtitulo {
+.banner {
+    padding: 3rem 7.5rem 6.25rem;
+    background-color: var(--rosa-escuro);
+    color: var(--branco);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+ 
+.titulo {
+    font-family: var(--fonte-secundaria);
+    font-size: 1.8rem;
+    margin-top: 4.875rem;
     margin-bottom: 2rem;
-    font-size: 2rem;
 }
-
+ 
 .paragrafo {
-    text-align: justify;
-    font-size: 1.1rem;
-    line-height: 2.25rem;
-    margin-bottom: 1.5rem;
+    font-family: var(--fonte-secundaria);
+    font-size: 1.3rem;
+    line-height: 2rem;
+    margin-bottom: 2rem;
 }
- .end {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-size: 1.250rem;
-    
+ 
+.imagens {
+    position: relative;
+    height: 406px;
 }
-
-@media (max-width: 1100px) {
-    .fotoSobreMim {
-        float: none;
-        display: block;
-        margin: 0 auto 2rem;
-        width: 70vw;
+ 
+.imagens > .minhaFoto {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+ 
+   
+    width: 350px;
+    height: 350px; 
+    border-radius: 50%; 
+    object-fit: cover; 
+    object-position: top;
+}
+ 
+.imagens > .circuloColorido {
+    position: absolute;
+    right: 7vw;
+    bottom: 2.2vw;
+    width: 25vw;
+}
+ 
+@media (max-width: 1100px) {    
+    .banner {
+        padding: 3.5rem 1.5rem;
     }
-
+ 
+    .titulo {
+        margin-top: 0;
+        margin-bottom: 1.5rem;
+    }
+ 
+    .paragrafo {
+        margin-bottom: 1.5rem;
+    }
+ 
+    .imagens {
+        height: 338px;
+    }
+   
+    .imagens > .minhaFoto {
+        width: 50vw;
+        border-radius: 50%;
+        width: 350px;
+        height: 350px; 
+    }
+   
+    .imagens > .circuloColorido {
+        right: 10vw;
+        width: 35vw;
+    }
+}
+ 
+@media (max-width: 744px) {
+    .banner {
+        padding: 2rem 1rem;
+        display: block;
+    }
+ 
+    .titulo {
+        margin-bottom: 2rem;
+    }
+ 
     .paragrafo {
         margin-bottom: 2rem;
     }
-
-  
-}
-
-@media (max-width: 744px) {
-    .fotoSobreMim {
-        width: 100%;
+ 
+    .imagens {
+        height: 307px;
     }
-
-    .subtitulo {
-        font-size: 1.5rem;
-        line-height: 2rem;
-        margin-bottom: 1.5rem;
+ 
+    .imagens > .minhaFoto, .imagens > .circuloColorido {
+        left: 0;
+        right: 0;
+        margin: 0 auto;
     }
-
-    .paragrafo {
-        font-size: 1rem;
-        line-height: 1.75rem;
+   
+    .imagens > .minhaFoto {
+        width: 170px;
+        transform: translate(5rem, 0px);
+    }
+   
+    .imagens > .circuloColorido {
+        width: 240px;
+        transform: translate(-1.5rem, 0px);
     }
 }
