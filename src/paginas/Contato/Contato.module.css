@@ -67,3 +67,50 @@
 .redesSociais a:hover {
     color: #ffa2c4; /* Cor ao passar o mouse, por exemplo, LinkedIn azul */
 }
+
+@media (max-width: 768px) {
+    .fotoSobreMim {
+        width: 60vw; /* Aumenta o tamanho da imagem para telas menores */
+        float: none; /* Remove o float para que a imagem não fique ao lado do texto */
+        margin: 0 auto 1rem; /* Centraliza a imagem */
+    }
+
+    .subtitulo {
+        font-size: 2rem; /* Reduz o tamanho da fonte do subtítulo */
+    }
+
+    .form {
+        width: 90%; /* Aumenta a largura do formulário em telas menores */
+        max-width: 100%; /* Remove a limitação do max-width para preencher melhor a tela */
+    }
+
+    .botao {
+        width: 100%; /* Deixa o botão com largura total no mobile */
+        padding: 1rem; /* Aumenta o espaçamento interno para melhor usabilidade em touch */
+    }
+
+    .redesSociais {
+        flex-direction: column; /* Organiza as redes sociais em coluna no mobile */
+        gap: 10px; /* Reduz o espaçamento entre os ícones */
+    }
+
+    .sucesso {
+        font-size: 1rem; /* Reduz o tamanho da mensagem de sucesso */
+    }
+}
+
+/* Ajustes específicos para telas muito pequenas */
+@media (max-width: 480px) {
+    .subtitulo {
+        font-size: 1.8rem; /* Tamanho ainda menor para subtítulo em telas muito pequenas */
+    }
+
+    .form {
+        gap: 0.75rem; /* Diminui o espaçamento entre os campos no mobile */
+    }
+
+    .campo input, .campo textarea {
+        font-size: 1rem; /* Ajusta o tamanho da fonte para melhor leitura */
+        padding: 0.5rem; /* Mantém o padding confortável para inputs */
+    }
+}
