@@ -92,6 +92,7 @@
     .redesSociais {
         flex-direction: column; /* Organiza as redes sociais em coluna no mobile */
         gap: 10px; /* Reduz o espaçamento entre os ícones */
+        align-items: center;
     }
 
     .sucesso {
