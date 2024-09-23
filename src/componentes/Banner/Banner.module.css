@@ -64,17 +64,13 @@
     }
    
     .imagens > .minhaFoto {
-        width: 45vw;  /* Ajusta para 45% da largura da tela */
-        height: 45vw; /* Altura igual à largura para manter o formato circular */
-        border-radius: 50%; /* Garante que continue redonda */
-        object-fit: cover; /* Mantém a imagem ajustada dentro do círculo */
-        object-position: top; /* Mantém o foco da imagem na parte superior */
+        width: 25vw;
+        border-radius: 50%;
     }
    
     .imagens > .circuloColorido {
-        right: 5vw;  /* Ajusta a posição para ficar mais centralizado em telas menores */
-        bottom: 4vw;
-        width: 30vw; /* Diminui o círculo para se ajustar ao tamanho da tela */
+        right: 10vw;
+        width: 35vw;
     }
 }
  
@@ -96,19 +92,10 @@
         height: 307px;
     }
  
-    .imagens > .minhaFoto {
-        width: 55vw;  /* Ajusta a imagem para 55% da largura da tela */
-        height: 55vw; /* Mantém o formato circular com altura igual à largura */
-        border-radius: 50%; /* Garante que continue redonda */
-        object-fit: cover;
-        object-position: top;
-    }
-    
-    
-    .imagens > .circuloColorido {
-        right: 4vw;  /* Ajusta a posição para ficar mais próximo da imagem */
-        bottom: 3vw;
-        width: 40vw; /* Ajusta o círculo para se adaptar melhor à tela pequena */
+    .imagens > .minhaFoto, .imagens > .circuloColorido {
+        left: 0;
+        right: 0;
+        margin: 0 auto;
     }
    
     .imagens > .minhaFoto {
