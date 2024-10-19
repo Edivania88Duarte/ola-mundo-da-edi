@@ -50,10 +50,9 @@ export default function SobreMim() {
             trilhar esse caminho e que permancem ao meu lado, segurando minha mão e torcendo pela minha evolução. A tecnologia me trouxe não só
             aprendizados e habilidades para migrar de carreira, mas amigos valiosos que estão junto comigo nessa jornada. 
             E se você chegou até aqui e ainda tá bem no início, cheio de anseios, incertezas e dúvidas, como um dia estive, te digo: 
-            É possível. Acredite em você, dê seu melhor até quando sua mente tentar te pregar peças e não desista!
-          
+            É possível. Acredite em você, dê seu melhor até quando sua mente tentar te pregar peças e não desista!          
+            <p className={styles.paragrafoEnd}>  A bênção já existe. Basta clareza para acessá-la.🌟 </p>
             </p>
-            <p className={styles.end}>  A bênção já existe. Basta clareza para acessá-la.🌟 </p>
         </PostModelo>
     )
 }
