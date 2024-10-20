@@ -62,14 +62,18 @@
     }
 
     .imagens > .minhaFoto {
-        width: 50vw; /* Proporcional ao tamanho da tela */
-        height: 50vw; /* Mantém o formato circular */
+        width: 10vw; 
+        height: 10vw; 
         border-radius: 50%;
+        top: -150vw;       
+        z-index: 10; 
+        display: none;
     }
 
     .imagens > .circuloColorido {
         right: 10vw;
-        width: 35vw; /* Ajuste conforme necessário */
+        width: 35vw; 
+        display: none;
     }
 }
 
@@ -88,15 +92,15 @@
     }
 
     .imagens {
-        height: auto; /* Ajusta a altura */
+        height: auto; 
         display: flex;
         justify-content: center;
         align-items: center;
-        flex-direction: column; /* Coloca a imagem e o círculo em coluna */
+        flex-direction: column; 
     }
 
     .imagens > .minhaFoto {
-        width: 55vw; /* Tamanho adequado para mobile */
-        height: 55vw; /* Mantém a altura igual à largura para circularidade */
+        width: 55vw; 
+        height: 55vw; 
     }
 }

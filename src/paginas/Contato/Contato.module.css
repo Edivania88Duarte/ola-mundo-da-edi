@@ -1,10 +1,3 @@
-.fotoSobreMim {
-    margin-bottom: .5rem;
-    margin-left: 1.5rem;
-    width: 40vw;
-    float: right;
-}
-
 .subtitulo {
     margin-bottom: 2rem;
     font-size: 2.5rem;
@@ -60,59 +53,90 @@
 }
 
 .redesSociais a {
-    color: #000; /* Cor do ícone, você pode ajustar conforme necessário */
+    color: #000; 
     transition: color 0.3s ease;
 }
 
 .redesSociais a:hover {
-    color: #ffa2c4; /* Cor ao passar o mouse, por exemplo, LinkedIn azul */
+    color: #ffa2c4; 
 }
 
-@media (max-width: 768px) {
-    .fotoSobreMim {
-        width: 60vw; /* Aumenta o tamanho da imagem para telas menores */
-        float: none; /* Remove o float para que a imagem não fique ao lado do texto */
-        margin: 0 auto 1rem; /* Centraliza a imagem */
-    }
+.mensagemSucesso {
+    color: green;
+    margin: 10px 0;
+}
 
+.mensagemErro {
+    color: red;
+    margin: 10px 0;
+}
+
+
+@media (max-width: 768px) {
+ 
     .subtitulo {
-        font-size: 2rem; /* Reduz o tamanho da fonte do subtítulo */
+        font-size: 2rem; 
     }
 
     .form {
-        width: 90%; /* Aumenta a largura do formulário em telas menores */
-        max-width: 100%; /* Remove a limitação do max-width para preencher melhor a tela */
+        width: 90%; 
+        max-width: 100%; 
     }
 
     .botao {
-        width: 100%; /* Deixa o botão com largura total no mobile */
-        padding: 1rem; /* Aumenta o espaçamento interno para melhor usabilidade em touch */
+        width: 100%; 
+        padding: 1rem; 
     }
 
     .redesSociais {      
         display: flex;
-        gap: 10px; /* Reduz o espaçamento entre os ícones */
+        gap: 15px; 
         align-items: center;
         justify-content: center;
     }
 
     .sucesso {
-        font-size: 1rem; /* Reduz o tamanho da mensagem de sucesso */
+        font-size: 1rem; 
     }
 }
 
-/* Ajustes específicos para telas muito pequenas */
+.mensagemSucesso {
+    color: green;
+    margin: 10px 0;
+}
+
+.mensagemErro {
+    color: red;
+    margin: 10px 0;
+}
+
+
+
 @media (max-width: 480px) {
     .subtitulo {
-        font-size: 1.8rem; /* Tamanho ainda menor para subtítulo em telas muito pequenas */
+        font-size: 1.8rem; 
     }
 
     .form {
-        gap: 0.75rem; /* Diminui o espaçamento entre os campos no mobile */
+        gap: 0.75rem; 
     }
 
     .campo input, .campo textarea {
-        font-size: 1rem; /* Ajusta o tamanho da fonte para melhor leitura */
-        padding: 0.5rem; /* Mantém o padding confortável para inputs */
+        font-size: 1rem; 
+        padding: 0.5rem;
     }
+}
+
+.mensagemSucesso {
+    color: green;
+    margin: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.mensagemErro {
+    color: red;
+    margin: 10px;
+    text-align: center;
+    font-weight: bold;
 }

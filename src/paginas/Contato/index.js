@@ -6,6 +6,7 @@ import { FaLinkedin, FaGithub } from 'react-icons/fa';
 
 export default function Contato() {
     const [mensagemEnviada, setMensagemEnviada] = useState(false);
+    const [mensagemErro, setMensagemErro] = useState('');
 
     const handleSubmit = async (event) => {
         event.preventDefault();
@@ -17,19 +18,30 @@ export default function Contato() {
             mensagem: event.target.mensagem.value,
         };
     
-        const response = await fetch('http://localhost:3001/send-email', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(data),
-        });
+        try {
+            const response = await fetch('http://localhost:3001/send-email', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data),
+            });
     
-        if (response.ok) {
-            setMensagemEnviada(true);
-                      
-        } else {
-            alert('Erro ao enviar mensagem. Tente novamente mais tarde.');
+            if (response.ok) {
+                setMensagemEnviada(true);
+                setMensagemErro('');              
+                setTimeout(() => {
+                    setMensagemEnviada(false);
+                }, 2000);
+            } else {
+                throw new Error('Erro ao enviar mensagem.');
+            }
+        } catch (error) {
+            setMensagemErro('Erro ao enviar mensagem. Tente novamente mais tarde.');
+            setMensagemEnviada(false);          
+            setTimeout(() => {
+                setMensagemErro('');
+            }, 2000);
         }
     
         event.target.reset();
@@ -43,10 +55,17 @@ export default function Contato() {
             <h3 className={styles.subtitulo}>
                 Entre em contato
             </h3>
-
-           
+            
             {mensagemEnviada && (
-                 alert('Mensagem enviada com sucesso!')
+                <div className={styles.mensagemSucesso}>
+                    Mensagem enviada com sucesso!
+                </div>
+            )}
+
+            {mensagemErro && (
+                <div className={styles.mensagemErro}>
+                    {mensagemErro}
+                </div>
             )}
 
             <form className={styles.form} onSubmit={handleSubmit}>
@@ -84,4 +103,3 @@ export default function Contato() {
         </PostModelo>
     );
 }
-

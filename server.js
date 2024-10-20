@@ -8,10 +8,7 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 
-/**
- * Configuração do transporte de e-mail usando Gmail
- * e uma senha de aplicativo gerada.
- */
+
 let transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
@@ -22,9 +19,10 @@ let transporter = nodemailer.createTransport({
 
 
 app.post('/send-email', (req, res) => {
+    console.log('Dados recebidos:', req.body);
     const { nome, email, telefone, mensagem } = req.body;
 
-    // Configuração do e-mail a ser enviado
+   
     const mailOptions = {
         from: process.env.EMAIL,  
         to: 'edivania.duarte.dev@gmail.com',  
@@ -37,8 +35,7 @@ app.post('/send-email', (req, res) => {
         `
     };
 
-    // Enviando o e-mail
-    transporter.sendMail(mailOptions, (error, info) => {
+        transporter.sendMail(mailOptions, (error, info) => {
         if (error) {
             console.log('Erro ao enviar e-mail:', error);
             res.status(500).send('Erro ao enviar mensagem.');
