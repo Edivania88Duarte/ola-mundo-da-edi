@@ -16,7 +16,7 @@
 }
 
 .titulo {
-    font-family: var(--fonte-secundaria);
+    font-family: var(--fonte-primaria);
     font-size: 1.225rem;
     color: var(--rosa-escuro);
     line-height: 1.75rem;
@@ -24,6 +24,7 @@
 }
 
 .botaoLer {
+    font-family: var(--fonte-secundaria);
     display: inline-block;
     border-radius: 24px;
     padding: 0.75rem 1.5rem;
@@ -34,6 +35,7 @@
     border: 3px solid var(--rosa-medio);
     cursor: pointer;
     transition: 0.2s
+
 }
 
 .botaoLer:hover {
@@ -50,5 +52,6 @@
     .botaoLer {
         padding: 0.6875rem 1.5rem;
         font-size: 1.375rem;
+        font-family: var(--fonte-secundaria);
     }
 }

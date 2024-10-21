@@ -25,8 +25,9 @@
 }
 
 .botao {
-    background-color: #e374b1;
+    background-color: var(--rosa-medio);;
     color: white;
+    font-weight: bold;
     padding: 0.75rem;
     border: none;
     border-radius: 4px;
@@ -35,14 +36,7 @@
 }
 
 .botao:hover {
-    background-color: #fba0d1;
-}
-
-.sucesso {
-    color: rgb(128, 0, 124);
-    font-weight: bold;
-    margin-top: 1rem;
-    text-align: center;
+    background-color:var(--rosa-escuro);;
 }
 
 .redesSociais {
