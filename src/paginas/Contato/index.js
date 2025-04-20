@@ -19,7 +19,7 @@ export default function Contato() {
         };
     
         try {
-            const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/send-email`, {
+            const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/send-email`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
