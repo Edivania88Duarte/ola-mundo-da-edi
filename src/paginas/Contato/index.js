@@ -26,6 +26,7 @@ export default function Contato() {
                 },
                 body: JSON.stringify(data),
             });
+            console.log(process.env.REACT_APP_BACKEND_URL)
     
             if (response.ok) {
                 setMensagemEnviada(true);
@@ -46,6 +47,7 @@ export default function Contato() {
     
         event.target.reset();
     }
+    
 
     return (
         <PostModelo
