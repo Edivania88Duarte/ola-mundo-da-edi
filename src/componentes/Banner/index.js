@@ -12,10 +12,10 @@ export default function Bannner() {
                 </h1>   
 
                 <p className={styles.paragrafo}>
-                    Seja bem-vindo(a) ao meu cantinho pessoal!
-                    Eu sou a Edivania Duarte, mais conhecida como Edi :) <br></br>
-                    Desenvolvedora Full Stack em formação e estagiária de desenvolvimento, sedenta por novos aprendizados e apaixonada por conexões. Aqui compartilho os 
-                    conhecimentos que venho adquirindo ao longo da minha formação e jornada. Espero contribuir com algo novo!
+                Seja bem-vindo(a) ao meu cantinho! <br></br>
+Eu sou a Edivania Duarte, mas pode me chamar de Edi :) <br></br>
+Sou desenvolvedora Full Stack em formação e estagiária de desenvolvimento, sempre sedenta por novos aprendizados e apaixonada por criar conexões.
+Aqui compartilho o conhecimento que estou adquirindo ao longo da minha jornada. Espero que algo que eu compartilhe aqui possa ser útil e inspirador para você!
                 </p>
             </div>
 
