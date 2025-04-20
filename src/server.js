@@ -53,30 +53,98 @@
 
 
 
+// import express from 'express';
+// import nodemailer from 'nodemailer';
+// import bodyParser from 'body-parser';
+// import cors from 'cors';
+// import dotenv from 'dotenv';
+
+// console.log('Iniciando o servidor...'); // Log inicial
+// dotenv.config();
+// console.log('Variáveis de ambiente carregadas:', {
+//   email: process.env.EMAIL,
+//   senha: process.env.SENHA_DE_APP ? 'Definida' : 'Não definida',
+// });
+
+// const app = express();
+// const PORT = process.env.PORT || 3001;
+
+// // Middlewares
+// console.log('Configurando middlewares...');
+// app.use(cors());
+// app.use(bodyParser.json());
+
+// // Rota de envio de e-mail
+// app.post('/send-email', async (req, res) => {
+//   console.log('Requisição recebida:', req.body);
+//   const { nome, email, telefone, mensagem } = req.body;
+
+//   let transporter = nodemailer.createTransport({
+//     service: 'gmail',
+//     auth: {
+//       user: process.env.EMAIL,
+//       pass: process.env.SENHA_DE_APP,
+//     },
+//   });
+
+//   const mailOptions = {
+//     from: process.env.EMAIL,
+//     to: 'edivania.duarte.dev@gmail.com',
+//     subject: 'Novo contato recebido',
+//     text: `
+//       Nome: ${nome}
+//       Email: ${email}
+//       Telefone: ${telefone}
+//       Mensagem: ${mensagem}
+//     `,
+//   };
+
+//   try {
+//     console.log('Enviando e-mail...');
+//     await transporter.sendMail(mailOptions);
+//     console.log('E-mail enviado com sucesso.');
+//     res.status(200).send('Mensagem enviada com sucesso.');
+//   } catch (error) {
+//     console.error('Erro ao enviar e-mail:', error);
+//     res.status(500).send('Erro ao enviar mensagem.');
+//   }
+// });
+
+// // Inicia o servidor
+// app.listen(PORT, () => {
+//   console.log(`Servidor rodando na porta ${PORT}`);
+// });
+
+
 import express from 'express';
 import nodemailer from 'nodemailer';
 import bodyParser from 'body-parser';
 import cors from 'cors';
 import dotenv from 'dotenv';
 
-console.log('Iniciando o servidor...'); // Log inicial
 dotenv.config();
-console.log('Variáveis de ambiente carregadas:', {
-  email: process.env.EMAIL,
-  senha: process.env.SENHA_DE_APP ? 'Definida' : 'Não definida',
-});
 
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-// Middlewares
-console.log('Configurando middlewares...');
-app.use(cors());
-app.use(bodyParser.json());
+app.use(express.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
-// Rota de envio de e-mail
+// Liberar CORS para localhost e vercel
+app.use(cors({
+  origin: (origin, callback) => {
+    const allowedOrigins = ['http://localhost:3000', 'https://ola-mundo-da-edi.vercel.app'];
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
+  methods: ['POST'],
+  allowedHeaders: ['Content-Type'],
+}));
+
 app.post('/send-email', async (req, res) => {
-  console.log('Requisição recebida:', req.body);
   const { nome, email, telefone, mensagem } = req.body;
 
   let transporter = nodemailer.createTransport({
@@ -100,9 +168,7 @@ app.post('/send-email', async (req, res) => {
   };
 
   try {
-    console.log('Enviando e-mail...');
     await transporter.sendMail(mailOptions);
-    console.log('E-mail enviado com sucesso.');
     res.status(200).send('Mensagem enviada com sucesso.');
   } catch (error) {
     console.error('Erro ao enviar e-mail:', error);
@@ -110,7 +176,6 @@ app.post('/send-email', async (req, res) => {
   }
 });
 
-// Inicia o servidor
 app.listen(PORT, () => {
   console.log(`Servidor rodando na porta ${PORT}`);
 });
