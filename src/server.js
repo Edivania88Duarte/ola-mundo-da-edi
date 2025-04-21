@@ -180,7 +180,6 @@
 //   console.log(`Servidor rodando na porta ${PORT}`);
 // });
 
-
 import express from 'express';
 import nodemailer from 'nodemailer';
 import bodyParser from 'body-parser';
@@ -195,34 +194,40 @@ const PORT = process.env.PORT || 3001;
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-// 🛡️ Lista de origens permitidas (coloque todas que vai usar)
+// 🌍 Lista de origens permitidas
 const allowedOrigins = [
   'http://localhost:3000',
   'https://ola-mundo-da-edi.vercel.app',
 ];
 
-// 🔐 CORS configurado corretamente
+// 🔐 Função para controlar origens permitidas
+function corsOrigin(origin, callback) {
+  if (!origin) return callback(null, true); // Permitir chamadas sem origem (ex: Postman)
+  if (
+    allowedOrigins.includes(origin) ||
+    origin.endsWith('.vercel.app') // Permitir deploys preview da Vercel
+  ) {
+    callback(null, true);
+  } else {
+    callback(new Error('Not allowed by CORS'));
+  }
+}
+
+// 🛡️ Middleware CORS
 app.use(cors({
-  origin: function (origin, callback) {
-    // Permitir sem origem (ex: curl, Postman) ou se estiver na lista
-    if (!origin || allowedOrigins.includes(origin)) {
-      callback(null, true);
-    } else {
-      callback(new Error('Not allowed by CORS'));
-    }
-  },
+  origin: corsOrigin,
   methods: ['POST', 'OPTIONS'],
   allowedHeaders: ['Content-Type'],
 }));
 
-// ✅ Trata preflight requests (OPTIONS)
+// ✅ Trata requisições OPTIONS (preflight)
 app.options('*', cors());
 
-// 📩 Rota de envio de e-mail
+// 📩 Rota para envio de e-mail
 app.post('/send-email', async (req, res) => {
   const { nome, email, telefone, mensagem } = req.body;
 
-  let transporter = nodemailer.createTransport({
+  const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
       user: process.env.EMAIL,
@@ -251,7 +256,7 @@ app.post('/send-email', async (req, res) => {
   }
 });
 
-// 🚀 Inicializa servidor
+// 🚀 Inicializa o servidor
 app.listen(PORT, () => {
   console.log(`Servidor rodando na porta ${PORT}`);
 });
