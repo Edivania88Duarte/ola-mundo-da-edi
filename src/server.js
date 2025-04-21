@@ -116,6 +116,71 @@
 // });
 
 
+// import express from 'express';
+// import nodemailer from 'nodemailer';
+// import bodyParser from 'body-parser';
+// import cors from 'cors';
+// import dotenv from 'dotenv';
+
+// dotenv.config();
+
+// const app = express();
+// const PORT = process.env.PORT || 3001;
+
+// app.use(express.json());
+// app.use(bodyParser.urlencoded({ extended: true }));
+
+// // Liberar CORS para localhost e vercel
+// app.use(cors({
+//   origin: (origin, callback) => {
+//     const allowedOrigins = ['http://localhost:3000', 'https://ola-mundo-da-edi.vercel.app'];
+//     if (!origin || allowedOrigins.includes(origin)) {
+//       callback(null, true);
+//     } else {
+//       callback(new Error('Not allowed by CORS'));
+//     }
+//   },
+//   methods: ['POST'],
+//   allowedHeaders: ['Content-Type'],
+// }));
+
+// app.post('/send-email', async (req, res) => {
+//   const { nome, email, telefone, mensagem } = req.body;
+
+//   let transporter = nodemailer.createTransport({
+//     service: 'gmail',
+//     auth: {
+//       user: process.env.EMAIL,
+//       pass: process.env.SENHA_DE_APP,
+//     },
+//   });
+
+//   const mailOptions = {
+//     from: process.env.EMAIL,
+//     to: 'edivania.duarte.dev@gmail.com',
+//     subject: 'Novo contato recebido',
+//     text: `
+//       Nome: ${nome}
+//       Email: ${email}
+//       Telefone: ${telefone}
+//       Mensagem: ${mensagem}
+//     `,
+//   };
+
+//   try {
+//     await transporter.sendMail(mailOptions);
+//     res.status(200).send('Mensagem enviada com sucesso.');
+//   } catch (error) {
+//     console.error('Erro ao enviar e-mail:', error);
+//     res.status(500).send('Erro ao enviar mensagem.');
+//   }
+// });
+
+// app.listen(PORT, () => {
+//   console.log(`Servidor rodando na porta ${PORT}`);
+// });
+
+
 import express from 'express';
 import nodemailer from 'nodemailer';
 import bodyParser from 'body-parser';
@@ -130,20 +195,30 @@ const PORT = process.env.PORT || 3001;
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-// Liberar CORS para localhost e vercel
+// 🛡️ Lista de origens permitidas (coloque todas que vai usar)
+const allowedOrigins = [
+  'http://localhost:3000',
+  'https://ola-mundo-da-edi.vercel.app',
+];
+
+// 🔐 CORS configurado corretamente
 app.use(cors({
-  origin: (origin, callback) => {
-    const allowedOrigins = ['http://localhost:3000', 'https://ola-mundo-da-edi.vercel.app'];
+  origin: function (origin, callback) {
+    // Permitir sem origem (ex: curl, Postman) ou se estiver na lista
     if (!origin || allowedOrigins.includes(origin)) {
       callback(null, true);
     } else {
       callback(new Error('Not allowed by CORS'));
     }
   },
-  methods: ['POST'],
+  methods: ['POST', 'OPTIONS'],
   allowedHeaders: ['Content-Type'],
 }));
 
+// ✅ Trata preflight requests (OPTIONS)
+app.options('*', cors());
+
+// 📩 Rota de envio de e-mail
 app.post('/send-email', async (req, res) => {
   const { nome, email, telefone, mensagem } = req.body;
 
@@ -176,6 +251,7 @@ app.post('/send-email', async (req, res) => {
   }
 });
 
+// 🚀 Inicializa servidor
 app.listen(PORT, () => {
   console.log(`Servidor rodando na porta ${PORT}`);
 });
