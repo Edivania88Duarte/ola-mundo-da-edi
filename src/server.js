@@ -203,15 +203,17 @@ const allowedOrigins = [
 // 🔐 Função para controlar origens permitidas
 function corsOrigin(origin, callback) {
   if (!origin) return callback(null, true); // Permitir chamadas sem origem (ex: Postman)
-  if (
-    allowedOrigins.includes(origin) ||
-    origin.endsWith('.vercel.app') // Permitir deploys preview da Vercel
-  ) {
+  
+  const isAllowed = allowedOrigins.includes(origin) ||
+    (typeof origin === 'string' && origin.endsWith('.vercel.app'));
+
+  if (isAllowed) {
     callback(null, true);
   } else {
     callback(new Error('Not allowed by CORS'));
   }
 }
+
 
 // 🛡️ Middleware CORS
 app.use(cors({
