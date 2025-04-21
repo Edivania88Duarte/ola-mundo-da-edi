@@ -218,8 +218,8 @@ function corsOrigin(origin, callback) {
 
 // 🛡️ Middleware CORS
 app.use(cors({
-  origin: corsOrigin,
-  methods: ['POST', 'OPTIONS'],
+  origin: ['https://ola-mundo-da-edi.vercel.app', 'http://localhost:3000'],
+  methods: ['GET', 'POST', 'OPTIONS'],
   allowedHeaders: ['Content-Type'],
 }));
 
