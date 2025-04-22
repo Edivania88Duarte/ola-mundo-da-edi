@@ -1,0 +1,85 @@
+.subtitulo {
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.projetosContainer {
+    padding: 2rem;
+    background-color: var(--branco);
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow-x: auto; /* Permite rolagem horizontal se necessário */
+}
+
+.projetosContainer h1 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: var(--cor-fonte-principal);
+}
+
+.listaProjetos {
+    display: flex !important; /* Força o uso de flex, evitando sobrescrição */
+    flex-wrap: nowrap; /* Garante que os cards fiquem na mesma linha */
+    gap: 2rem;
+    justify-content: flex-start; /* Alinha à esquerda */
+    align-items: stretch; /* Garante que os cards tenham a mesma altura */
+    min-width: max-content; /* Garante que o contêiner não encolha */
+}
+
+.projeto {
+    background-color: var(--rosa-medio);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    text-align: center;
+    padding: 1.5rem;
+    transition: transform 0.3s ease;
+    font-family: var(--fonte-principal);
+    color: var(--cor-fonte-principal);
+    width: 300px; /* Largura fixa para o card */
+    height: 400px; /* Altura fixa para manter proporção */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distribui o conteúdo verticalmente */
+    flex-shrink: 0; /* Impede que os cards encolham */
+}
+
+.projeto:hover {
+    transform: scale(1.03);
+}
+
+.projeto img {
+    width: 100%;
+    height: 150px; /* Altura fixa para a imagem */
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.projeto h2 {
+    font-size: 1.5rem;
+    margin: 0.5rem 0;
+    color: var(--cor-fonte-principal);
+    font-family: var(--fonte-secundaria);
+}
+
+.projeto p {
+    font-size: 1rem;
+    color: var(--cor-fonte-post);
+    margin: 0.5rem 0;
+    flex-grow: 1; /* Permite que o texto ocupe o espaço disponível */
+}
+
+.projeto a {
+    display: inline-block;
+    background-color: var(--rosa-escuro);
+    color: var(--branco);
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.projeto a:hover {
+    background-color: #94486a;
+}

@@ -16,6 +16,10 @@ export default function Menu() {
                     Sobre Mim
                 </MenuLink>
 
+                <MenuLink to="/projetos">
+                    Projetos
+                </MenuLink>
+
                 <MenuLink to="/contato">
                     Contato
                 </MenuLink>

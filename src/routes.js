@@ -8,6 +8,7 @@ import Post from "paginas/Post";
 import NaoEncontrada from "paginas/NaoEncontrada";
 import ScrollToTop from "componentes/ScrollToTop";
 import Contato from "paginas/Contato";
+import Projetos from "paginas/Projetos";
 
 function AppRoutes() {
   return (
@@ -19,6 +20,7 @@ function AppRoutes() {
         <Route path="/" element={<PaginaPadrao />}>
           <Route path="/" element={<Inicio />} />
           <Route path="/sobremim" element={<SobreMim />} />  
+          <Route path="/projetos" element={<Projetos />} /> 
           <Route path="/contato" element={<Contato />} />         
         </Route>
 

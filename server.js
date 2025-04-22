@@ -195,15 +195,14 @@ const PORT = process.env.PORT || 3001;
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-// 🌍 Lista de origens permitidas
 const allowedOrigins = [
   'http://localhost:3000',
   'https://ola-mundo-da-edi.vercel.app',
 ];
 
-// 🔐 Função para controlar origens permitidas
+
 function corsOrigin(origin, callback) {
-  if (!origin) return callback(null, true); // Permitir chamadas sem origem (ex: Postman)
+  if (!origin) return callback(null, true); 
   
   const isAllowed = allowedOrigins.includes(origin) ||
     (typeof origin === 'string' && origin.endsWith('.vercel.app'));
@@ -216,25 +215,23 @@ function corsOrigin(origin, callback) {
 }
 
 
-// 🛡️ Middleware CORS
 app.use(cors({
   origin: ['https://ola-mundo-da-edi.vercel.app', 'http://localhost:3000'],
   methods: ['GET', 'POST', 'OPTIONS'],
   allowedHeaders: ['Content-Type'],
 }));
 
-// ✅ Trata requisições OPTIONS (preflight)
 app.options('*', cors());
 
-// 📩 Rota para envio de e-mail
+
 app.post('/send-email', async (req, res) => {
   const { nome, email, telefone, mensagem } = req.body;
 
   const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-      user: process.env.EMAIL,
-      pass: process.env.SENHA_DE_APP,
+      user: process.env.REACT_APP_EMAIL,
+      pass: process.env.REACT_APP_SENHA_DE_APP,
     },
   });
 
@@ -259,7 +256,7 @@ app.post('/send-email', async (req, res) => {
   }
 });
 
-// 🚀 Inicializa o servidor
+
 app.listen(PORT, () => {
   console.log(`Servidor rodando na porta ${PORT}`);
 });
