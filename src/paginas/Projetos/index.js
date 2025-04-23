@@ -5,7 +5,7 @@ import fotoCapa from 'assets/sobre_mim_capa.png';
 
 const projetos = [
   {
-    nome: 'Ibero Life',
+    nome: 'Clínica Ibero Life',
     descricao: 'Sistema de gestão de saúde e bem-estar.',
     imagem: '/assets/iberoLife.png',
     link: 'https://iberolife.vercel.app/pt',
