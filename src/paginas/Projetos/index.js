@@ -5,7 +5,7 @@ import fotoCapa from 'assets/sobre_mim_capa.png';
 
 const projetos = [
   {
-    nome: 'Iberolife',
+    nome: 'Ibero Life',
     descricao: 'Sistema de gestão de saúde e bem-estar.',
     imagem: '/assets/iberoLife.png',
     link: 'https://iberolife.vercel.app/pt',
@@ -17,7 +17,7 @@ const projetos = [
     link: 'https://sistema-de-vendas-peach.vercel.app/',
   },
   {
-    nome: 'Arte Di Maria',
+    nome: 'Galeria Arte Di Maria',
     descricao: 'Sistema de cadastro de artes.',
     imagem: '/assets/.png',
     link: '#',
