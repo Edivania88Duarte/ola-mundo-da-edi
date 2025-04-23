@@ -28,7 +28,7 @@ const projetos = [
 const Projetos = () => {
   return (
     <PostModelo fotoCapa={fotoCapa} titulo="Projetos">
-      <h1 className={styles.subtitulo}>Meus Projetos</h1>
+      <h1 className={styles.subtitulo}>Projetos e Colaborações</h1>
 
     <div className={styles.projetosContainer}>      
       <div className={styles.listaProjetos}>
