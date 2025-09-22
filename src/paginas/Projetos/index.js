@@ -6,7 +6,7 @@ import fotoCapa from 'assets/sobre_mim_capa.png';
 const projetos = [
   {
     nome: 'Aromas de Afeto',
-    descricao: 'Landing page para o projeto Aromas de Afeto.',
+    descricao: 'Landing page para a loja Aromas de Afeto.',
     imagem: '/assets/aromasDeAfeto.png',
     link: 'https://aromas-de-afeto.vercel.app/',
   },
