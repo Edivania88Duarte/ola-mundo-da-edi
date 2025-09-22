@@ -7,7 +7,7 @@ const projetos = [
   {
     nome: 'Aromas de Afeto',
     descricao: 'Landing page para a loja Aromas de Afeto.',
-    imagem: '/assets/aromasDeAfeto.png',
+    imagem: '/assets/aromasDeAfeto2.png',
     link: 'https://aromas-de-afeto.vercel.app/',
   },
   {
