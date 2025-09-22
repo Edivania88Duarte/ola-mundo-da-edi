@@ -5,10 +5,10 @@ import fotoCapa from 'assets/sobre_mim_capa.png';
 
 const projetos = [
   {
-    nome: 'Clínica Ibero Life',
-    descricao: 'Sistema de gestão de saúde e bem-estar.',
-    imagem: '/assets/iberoLife.png',
-    link: 'https://iberolife.vercel.app/pt',
+    nome: 'Aromas de Afeto',
+    descricao: 'Landing page para o projeto Aromas de Afeto.',
+    imagem: '/assets/aromasDeAfeto.png',
+    link: 'https://aromas-de-afeto.vercel.app/',
   },
   {
     nome: 'Sistema de Vendas',
@@ -17,10 +17,10 @@ const projetos = [
     link: 'https://sistema-de-vendas-peach.vercel.app/',
   },
   {
-    nome: 'Galeria Arte Di Maria',
-    descricao: 'Sistema de cadastro de artes.',
-    imagem: '/assets/.png',
-    link: '#',
+    nome: 'Acquative',
+    descricao: 'Site institucional para empresa de Acquative.',
+    imagem: '/assets/acquative.png',
+    link: 'https://acquative.vercel.app/',
   },
 ];
 
