@@ -9,6 +9,7 @@
     background-color: var(--branco);
     max-width: 1200px;
     margin: 0 auto;  
+    overflow: visible;
 }
 
 .projetosContainer h1 {
@@ -26,6 +27,8 @@
     min-width: max-content; /* Garante que o contêiner não encolha */
 }
 
+
+
 .projeto {
     background-color: var(--rosa-medio);
     border-radius: 12px;
@@ -37,11 +40,13 @@
     font-family: var(--fonte-principal);
     color: var(--cor-fonte-principal);
     width: 300px; /* Largura fixa para o card */
-    height: 400px; /* Altura fixa para manter proporção */
+    max-width: 320px; /* NÃO deixa passar disso! */
+    min-width: 260px;
+    height: 400px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Distribui o conteúdo verticalmente */
-    flex-shrink: 0; /* Impede que os cards encolham */
+    justify-content: space-between;
+    flex-shrink: 0;
 }
 
 .projeto:hover {

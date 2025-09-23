@@ -82,80 +82,84 @@ h1, h2, h3 {
 } */
 
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} 
+
 :root {
   --rosa-escuro: #aa6581;
   --rosa-medio: #e399b6;
+  --rosa-claro: #f9d3e3;
   --cor-fonte-principal: #041833;
   --cor-fonte-post: #444444;
   --branco: #FFF;
   --fonte-principal: 'Raleway', sans-serif;
   --fonte-secundaria: 'Playfair Display', sans-serif;
-  --rosa-claro: #f9d3e3; /* Pra hover das setas! */
 }
 
-/* --- Swiper: Botões personalizados --- */
+.swiper {
+    padding-bottom: 40px;
+    overflow: visible !important;
+}
+
+.swiper-slide {
+    display: flex !important;
+    justify-content: center;
+    align-items: stretch;
+}
+
 .swiper-button-prev,
 .swiper-button-next {
-    color: var(--rosa-escuro);
-    top: 50%;
-    transform: translateY(-50%);
-    width: 28px;
-    height: 28px;
-    border-radius: 50%;
-    background: #fff;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    color: var(--rosa-escuro) !important;
+    background: #fff !important;
+    border-radius: 50% !important;
+    width: 30px !important;
+    height: 30px !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    top: 50% !important;
+    transform: translateY(-50%) !important;
     z-index: 99;
-    transition: background 0.3s;
 }
-
 .swiper-button-prev {
-    left: -32px !important;
+    left: -38px !important;
 }
-
 .swiper-button-next {
-    right: -32px !important;
+    right: -38px !important;
 }
-
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    font-size: 16px !important;
+    font-weight: bold;
+}
 .swiper-button-prev:hover,
 .swiper-button-next:hover {
-    background: var(--rosa-claro);
-    color: var(--cor-fonte-principal);
+    background: var(--rosa-claro) !important;
 }
 
 @media (max-width: 1024px) {
-    .swiper-button-prev { left: -18px !important; }
-    .swiper-button-next { right: -18px !important; }
+    .swiper-button-prev { left: -22px !important; }
+    .swiper-button-next { right: -22px !important; }
 }
 @media (max-width: 600px) {
     .swiper-button-prev, .swiper-button-next {
-        width: 22px; height: 22px;
+        width: 20px !important;
+        height: 20px !important;
         left: 0 !important;
         right: 0 !important;
     }
 }
 
-/* --- Swiper: Bolinhas (paginações) --- */
+/* Bolinhas da paginação */
 .swiper-pagination-bullet {
     background: var(--rosa-escuro) !important;
-    opacity: 0.3;
+    opacity: 0.2;
+    width: 10px;
+    height: 10px;
+    margin: 0 4px !important;
 }
 .swiper-pagination-bullet-active {
     background: var(--rosa-escuro) !important;
     opacity: 1;
-}
-
-.swiper {
-    width: 100% !important;
-    overflow: visible !important;
-    padding-bottom: 40px;
-}
-
-/* --- Seu restante do CSS pode continuar igual! --- */
-
-.projetosContainer {
-    padding: 2rem 3rem;
-    background-color: var(--branco);
-    max-width: 1200px;
-    margin: 0 auto;  
-    overflow: visible;
 }
