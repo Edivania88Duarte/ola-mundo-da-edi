@@ -110,9 +110,7 @@ h1, h2, h3 {
     align-items: stretch;
 }
 
-.swiper-button-prev {
-     left: -60px !important;
-}
+.swiper-button-prev,
 .swiper-button-next {
     color: var(--rosa-escuro) !important;
     background: #fff !important;
@@ -123,7 +121,6 @@ h1, h2, h3 {
     top: 50% !important;
     transform: translateY(-50%) !important;
     z-index: 99;
-    right: -60px !important;
 }
 .swiper-button-prev {
     left: -38px !important;
@@ -152,10 +149,6 @@ h1, h2, h3 {
         left: 0 !important;
         right: 0 !important;
     }
-}
-@media (max-width: 1300px) {
-    .swiper-button-prev { left: -30px !important; }
-    .swiper-button-next { right: -30px !important; }
 }
 
 /* Bolinhas da paginação */
