@@ -36,22 +36,34 @@ const Projetos = () => {
     <PostModelo fotoCapa={fotoCapa} titulo="Projetos">
       <h1 className={styles.subtitulo}>Projetos e Colaborações</h1>
 
-    <div className={styles.projetosContainer}>      
-      <div className={styles.listaProjetos}>
-        {projetos.map((p, index) => (
-          <div className={styles.projeto} key={index}>
-            <img src={p.imagem} alt={p.nome} />
-            <h2>{p.nome}</h2>
-            <p>{p.descricao}</p>
-            {p.link !== '#' && (
-              <a href={p.link} target="_blank" rel="noopener noreferrer">
-                Ver Projeto
-              </a>
-            )}
-          </div>
-        ))}
+      <div className={styles.projetosContainer}>
+        <Swiper
+          spaceBetween={24}
+          slidesPerView={1}
+          breakpoints={{
+            640: { slidesPerView: 1 },
+            900: { slidesPerView: 2 },
+            1200: { slidesPerView: 3 },
+          }}
+          loop={true}
+          autoplay={{ delay: 3000 }}
+        >
+          {projetos.map((p, idx) => (
+            <SwiperSlide key={idx}>
+              <div className={styles.projeto}>
+                <img src={p.imagem} alt={p.nome} />
+                <h2>{p.nome}</h2>
+                <p>{p.descricao}</p>
+                {p.link !== '#' && (
+                  <a href={p.link} target="_blank" rel="noopener noreferrer">
+                    Ver Projeto
+                  </a>
+                )}
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
-    </div>
     </PostModelo>
   );
 };
