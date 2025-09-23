@@ -48,7 +48,7 @@ const Projetos = () => {
   slidesPerView={1}
   navigation
   pagination={{ clickable: true }}
-  loop={true}
+  // loop={true}
   autoplay={{ delay: 3000, disableOnInteraction: false }}
   breakpoints={{
     1300: { slidesPerView: 3 }, // *** Coloque o MAIOR primeiro ***
