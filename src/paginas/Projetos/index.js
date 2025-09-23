@@ -43,34 +43,34 @@ const Projetos = () => {
 
       <div className={styles.projetosContainer}>
         <Swiper
-          modules={[Navigation, Pagination, Autoplay]}
-          spaceBetween={32}
-          slidesPerView={1}    // valor padrão para mobile
-          navigation
-          pagination={{ clickable: true }}
-          loop={true}
-          autoplay={{ delay: 3000, disableOnInteraction: false }}
-          breakpoints={{
-            640: { slidesPerView: 1 },
-            900: { slidesPerView: 2 },
-            1200: { slidesPerView: 3 }, // *** Limita para no máximo 3 ***
-          }}
-        >
-          {projetos.map((p, idx) => (
-            <SwiperSlide key={idx}>
-              <div className={styles.projeto}>
-                <img src={p.imagem} alt={p.nome} />
-                <h2>{p.nome}</h2>
-                <p>{p.descricao}</p>
-                {p.link !== '#' && (
-                  <a href={p.link} target="_blank" rel="noopener noreferrer">
-                    Ver Projeto
-                  </a>
-                )}
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
+  modules={[Navigation, Pagination, Autoplay]}
+  spaceBetween={32}
+  slidesPerView={1}
+  navigation
+  pagination={{ clickable: true }}
+  loop={true}
+  autoplay={{ delay: 3000, disableOnInteraction: false }}
+  breakpoints={{
+    1300: { slidesPerView: 3 }, // *** Coloque o MAIOR primeiro ***
+    900: { slidesPerView: 2 },
+    640: { slidesPerView: 1 },
+  }}
+>
+  {projetos.map((p, idx) => (
+    <SwiperSlide key={idx}>
+      <div className={styles.projeto}>
+        <img src={p.imagem} alt={p.nome} />
+        <h2>{p.nome}</h2>
+        <p>{p.descricao}</p>
+        {p.link !== '#' && (
+          <a href={p.link} target="_blank" rel="noopener noreferrer">
+            Ver Projeto
+          </a>
+        )}
+      </div>
+    </SwiperSlide>
+  ))}
+</Swiper>
       </div>
     </PostModelo>
   );
