@@ -22,6 +22,12 @@ const projetos = [
     imagem: '/assets/acquative.png',
     link: 'https://acquative.vercel.app/',
   },
+   {
+    nome: 'Projeto Jandaya',
+    descricao: 'Site educacional para o Projeto Jandaya.',
+    imagem: '/assets/projetoJandaya.png',
+    link: 'https://projeto-jandaya.vercel.app/',
+  },
 ];
 
 
