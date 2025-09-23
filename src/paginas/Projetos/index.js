@@ -45,7 +45,7 @@ const Projetos = () => {
         <Swiper
           modules={[Navigation, Pagination, Autoplay]}
           spaceBetween={32}
-          slidesPerView={1}
+          slidesPerView={1}    // valor padrão para mobile
           navigation
           pagination={{ clickable: true }}
           loop={true}
@@ -53,7 +53,7 @@ const Projetos = () => {
           breakpoints={{
             640: { slidesPerView: 1 },
             900: { slidesPerView: 2 },
-            1200: { slidesPerView: 3 },
+            1200: { slidesPerView: 3 }, // *** Limita para no máximo 3 ***
           }}
         >
           {projetos.map((p, idx) => (
