@@ -5,7 +5,7 @@
 }
 
 .projetosContainer {
-    padding: 2rem;
+    padding: 2rem 5rem;
     background-color: var(--branco);
     max-width: 1200px;
     margin: 0 auto;  
@@ -84,5 +84,7 @@
 }
 
 .swiper {
+    width: 100% !important;
+    overflow: visible !important;
     padding-bottom: 40px;
 }
