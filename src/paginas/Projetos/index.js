@@ -2,6 +2,11 @@ import styles from './Projetos.module.css';
 import React from 'react';
 import PostModelo from 'componentes/PostModelo';
 import fotoCapa from 'assets/sobre_mim_capa.png';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
 const projetos = [
   {
