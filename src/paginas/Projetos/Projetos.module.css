@@ -86,3 +86,30 @@
 .swiper {
     padding-bottom: 40px;
 }
+
+.swiper-button-prev,
+.swiper-button-next {
+    color: var(--rosa-escuro);  /* deixa na cor da sua paleta */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    z-index: 10;
+}
+
+.swiper-button-prev {
+    left: -40px;   /* Afasta da esquerda */
+}
+
+.swiper-button-next {
+    right: -40px;  /* Afasta da direita */
+}
+
+/* Tira o fundo no hover se quiser */
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+    background: var(--rosa-claro);
+}
