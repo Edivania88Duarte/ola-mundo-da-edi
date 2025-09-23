@@ -8,8 +8,7 @@
     padding: 2rem;
     background-color: var(--branco);
     max-width: 1200px;
-    margin: 0 auto;
-    overflow-x: auto; /* Permite rolagem horizontal se necessário */
+    margin: 0 auto;  
 }
 
 .projetosContainer h1 {
@@ -82,4 +81,8 @@
 
 .projeto a:hover {
     background-color: #94486a;
+}
+
+.swiper {
+    padding-bottom: 40px;
 }

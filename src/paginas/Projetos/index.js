@@ -38,15 +38,18 @@ const Projetos = () => {
 
       <div className={styles.projetosContainer}>
         <Swiper
-          spaceBetween={24}
+          modules={[Navigation, Pagination, Autoplay]}
+          spaceBetween={32}
           slidesPerView={1}
+          navigation
+          pagination={{ clickable: true }}
+          loop={true}
+          autoplay={{ delay: 3000, disableOnInteraction: false }}
           breakpoints={{
             640: { slidesPerView: 1 },
             900: { slidesPerView: 2 },
             1200: { slidesPerView: 3 },
           }}
-          loop={true}
-          autoplay={{ delay: 3000 }}
         >
           {projetos.map((p, idx) => (
             <SwiperSlide key={idx}>
