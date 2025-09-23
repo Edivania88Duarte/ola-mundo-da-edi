@@ -1,4 +1,4 @@
-* {
+/* * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -79,4 +79,83 @@ h1, h2, h3 {
     .swiper-button-next {
         right: -30px !important;
     }
+} */
+
+
+:root {
+  --rosa-escuro: #aa6581;
+  --rosa-medio: #e399b6;
+  --cor-fonte-principal: #041833;
+  --cor-fonte-post: #444444;
+  --branco: #FFF;
+  --fonte-principal: 'Raleway', sans-serif;
+  --fonte-secundaria: 'Playfair Display', sans-serif;
+  --rosa-claro: #f9d3e3; /* Pra hover das setas! */
+}
+
+/* --- Swiper: Botões personalizados --- */
+.swiper-button-prev,
+.swiper-button-next {
+    color: var(--rosa-escuro);
+    top: 50%;
+    transform: translateY(-50%);
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    z-index: 99;
+    transition: background 0.3s;
+}
+
+.swiper-button-prev {
+    left: -32px !important;
+}
+
+.swiper-button-next {
+    right: -32px !important;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+    background: var(--rosa-claro);
+    color: var(--cor-fonte-principal);
+}
+
+@media (max-width: 1024px) {
+    .swiper-button-prev { left: -18px !important; }
+    .swiper-button-next { right: -18px !important; }
+}
+@media (max-width: 600px) {
+    .swiper-button-prev, .swiper-button-next {
+        width: 22px; height: 22px;
+        left: 0 !important;
+        right: 0 !important;
+    }
+}
+
+/* --- Swiper: Bolinhas (paginações) --- */
+.swiper-pagination-bullet {
+    background: var(--rosa-escuro) !important;
+    opacity: 0.3;
+}
+.swiper-pagination-bullet-active {
+    background: var(--rosa-escuro) !important;
+    opacity: 1;
+}
+
+.swiper {
+    width: 100% !important;
+    overflow: visible !important;
+    padding-bottom: 40px;
+}
+
+/* --- Seu restante do CSS pode continuar igual! --- */
+
+.projetosContainer {
+    padding: 2rem 3rem;
+    background-color: var(--branco);
+    max-width: 1200px;
+    margin: 0 auto;  
+    overflow: visible;
 }
